@@ -1,7 +1,7 @@
 import dom from '../dom.js';
 import state from '../data.js';
 import { createCells } from '../components/cells.js';
-import { setHover } from '../utils/setHover.js';
+import { setHover } from '../components/setHover.js';
 
 export const handleLoad = () => {
     for (let i = 0; i < 9; i++) {

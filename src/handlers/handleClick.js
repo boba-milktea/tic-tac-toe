@@ -1,8 +1,8 @@
 import state from '../data.js';
 import dom from '../dom.js';
 import { hasWinner } from '../utils/hasWinner.js';
-import { setHover } from '../utils/setHover.js';
-import { placeSymbol } from '../utils/placeSymbol.js';
+import { setHover } from '../components/setHover.js';
+import { placeSymbol } from '../components/placeSymbol.js';
 import { isDraw } from '../utils/isDraw.js';
 
 export const handleClick = (e) => {
