@@ -5,9 +5,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="./css/index.css" />
-        <title>JS starter</title>
+        <title>Tic Tac Toe</title>
     </head>
     <body>
+        <header>
+            <h1>Tic Tac Toe</h1>
+            <p>
+                The classic Tic Tac Toe game. <br />Play as "X" against a
+                opponent that places "O" in random empty spots.
+            </p>
+        </header>
+        <main>
+            <div class="board" id="board"></div>
+            <div class="message-modal" id="message-modal">
+                <div id="message-text"></div>
+                <button id="restart">Restart</button>
+            </div>
+        </main>
+
         <script type="module" src="./src/init.js"></script>
     </body>
 </html>
