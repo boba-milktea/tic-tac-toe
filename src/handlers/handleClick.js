@@ -7,6 +7,10 @@ import { isDraw } from '../utils/isDraw.js';
 
 export const handleClick = (e) => {
     const cell = e.target;
+
+    if (cell.classList.contains('x') || cell.classList.contains('circle')) {
+        return;
+    }
     const currentClass = state.circleTurn ? 'circle' : 'x';
     placeSymbol(cell, currentClass);
     state.inputResults[cell.id] = currentClass;
@@ -16,13 +20,12 @@ export const handleClick = (e) => {
     if (winner) {
         dom.message.innerText = `${state.circleTurn ? "O's" : "X's"} Wins!`;
         dom.modal.classList.add('show');
-    }
-
-    if (draw) {
+    } else if (draw) {
         dom.message.innerText = 'Draw!';
         dom.modal.classList.add('show');
+    } else {
+        state.circleTurn = !state.circleTurn;
     }
 
-    state.circleTurn = !state.circleTurn;
     setHover(dom.board, state.circleTurn);
 };
